@@ -32,3 +32,5 @@
         d     (fn [[x y]] (+ (Math/abs x) (Math/abs y)))]
     (time (do (println (d (first (reduce move [[0 0] \E] insts))))
               (println (d (first (reduce move2 [[0 0] [10 1]] insts))))))))
+
+(main-)
