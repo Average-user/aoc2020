@@ -2,16 +2,16 @@
   (:require [clojure.core.match :refer [match]]))
        
 (defn move [[[x y] dir] inst]
-  (letfn [(rotate [b deg dir]
+  (letfn [(rotate [deg dir]
             (nth (drop-while #(not= dir %) (cycle [\N \E \S \W])) (/ deg 90)))]
     (match inst
            [\N n] [[x (+ y n)] dir]
            [\S n] [[x (- y n)] dir]
            [\E n] [[(+ x n) y] dir]
            [\W n] [[(- x n) y] dir]
-           [\F n] (move [[x y] dir] [dir n])
-           [\R d] [[x y] (rotate true d dir)]
-           [\L d] [[x y] (rotate false (- 360 d) dir)])))
+           [\F n] (recur [[x y] dir] [dir n])
+           [\R d] [[x y] (rotate d dir)]
+           [\L d] [[x y] (rotate (- 360 d) dir)])))
 
 (defn move2 [[pos [j k]] inst]
   (letfn [(rotate [s [j k] deg]
