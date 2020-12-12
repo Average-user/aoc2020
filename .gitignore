@@ -1,5 +1,6 @@
 *.hi
 *.o
+*.sh
 day01
 day02
 day03
