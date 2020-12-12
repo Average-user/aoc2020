@@ -1,6 +1,6 @@
 local xs = {}
 
-for a in io.open("inputs/day01.txt", "r"):lines() do table.insert(xs,tonumber(a)) end
+for a in io.open("../inputs/day01.txt", "r"):lines() do table.insert(xs,tonumber(a)) end
 
 local n = #xs
 local p1,p2 = nil,nil

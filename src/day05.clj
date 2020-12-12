@@ -8,7 +8,7 @@
     (first (filter is-missing? (range)))))
 
 (defn main- []
-  (let [ids (->> (clojure.java.io/reader "inputs/day05.txt")
+  (let [ids (->> (clojure.java.io/reader "../inputs/day05.txt")
                  (line-seq)
                  (map get-id)
                  (set))]

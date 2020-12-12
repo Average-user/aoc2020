@@ -38,7 +38,7 @@ countbags m x = f x -1
         xs = m M.! x
 
 main = do
-  ls <- T.lines <$> TIO.readFile "inputs/day07.txt"
+  ls <- T.lines <$> TIO.readFile "../inputs/day07.txt"
   let m = M.fromList (map canContain ls)
       bs = M.keys m
   print (length (S.fromList (filter (canContainShiny m) (M.keys m))))

@@ -33,7 +33,7 @@ getModVs p = map (\i -> M.insert i (m (p M.! i)) p)
     m (Jmp x) = (Nop x)
 
 main = do
-  is <- map readInst . lines <$> readFile "inputs/day08.txt"
+  is <- map readInst . lines <$> readFile "../inputs/day08.txt"
   let program = M.fromList (zip [0..] is)
   print (snd (run program))
   print (snd <$> find fst (map run (getModVs program)))

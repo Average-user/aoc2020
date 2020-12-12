@@ -3,7 +3,7 @@ import qualified Data.Set as S
 buildSet n m lines = S.fromList [(x,y) | x <- [0..m-1], y <- [0..n-1], lines!!y!!x == '#']
 
 main = do
-  lines <- lines <$> readFile "inputs/day03.txt"
+  lines <- lines <$> readFile "../inputs/day03.txt"
   let (m,n)   = (length (head lines), length lines)
       ts      = buildSet n m lines
       f dx dy = filter (`S.member` ts)

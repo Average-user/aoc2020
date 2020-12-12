@@ -29,7 +29,7 @@ buildMap xs = M.fromList [((x,y), (True,xs!!y!!x)) | x <- [0..m-1], y <- [0..n-1
     (n,m) = (length xs, length (head xs))
 
 main = do
-  ls <- lines <$> readFile "inputs/day11.txt"
+  ls <- lines <$> readFile "../inputs/day11.txt"
   let m = buildMap ls
       f1 m   = mapMaybe (fmap snd . (M.!?) m ) . next
       f2 m c = mapMaybe (inDir m c) dirs

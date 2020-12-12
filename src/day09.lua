@@ -1,5 +1,5 @@
 local x = {}
-for a in io.open("inputs/day09.txt", "r"):lines() do table.insert(x,tonumber(a)) end
+for a in io.open("../inputs/day09.txt", "r"):lines() do table.insert(x,tonumber(a)) end
 
 local n,p1 = #x, -1
 

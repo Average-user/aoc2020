@@ -1,6 +1,6 @@
 local xs,max = {},0
 
-for line in io.open("inputs/.txt", "r"):lines() do
+for line in io.open("../inputs/day10.txt", "r"):lines() do
    local a = tonumber(line)
    if a > max then max = a end
    table.insert(xs,a)

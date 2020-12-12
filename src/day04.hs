@@ -31,7 +31,7 @@ valid2 p = and [ length byr == 4, r byr' 1920 2002
         n' = read n :: Int
     
 main = do
-  lines <- splitOn "\n\n" <$> readFile "inputs/day04.txt"
+  lines <- splitOn "\n\n" <$> readFile "../inputs/day04.txt"
   let vals = map getvals lines
       valid1 = filter (\p -> (all (isJust . (M.!?) p) necessary)) vals
 
