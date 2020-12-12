@@ -1,6 +1,8 @@
 *.hi
 *.o
 *.sh
+src/.cpcache
+src/.nrepl-port
 day01
 day02
 day03
