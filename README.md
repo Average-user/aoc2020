@@ -3,10 +3,13 @@
 How to run:
 
 ```
-ghc -O2 dayXX.hs
-./dayXX.hs`
+ghc -O2 dayXX.hs && ./dayXX
 
 luajit dayXX.lua
 
 clj -M dayXX.clj
+
+python dayXX.py    (python 2.7)
+
+rustc -O dayXX.hs && ./dayXX
 ```
