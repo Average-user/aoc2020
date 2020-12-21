@@ -1,6 +1,7 @@
 *.hi
 *.o
 *.sh
+*.fasl
 src/.cpcache
 src/.nrepl-port
 day01
