@@ -13,5 +13,5 @@ python dayXX.py    (python 2.7)
 
 rustc -O dayXX.hs && ./dayXX
 
-sbcl --script dayXX.lisp
+sbcl --load dayXX.lisp --eval '(quit)'
 ```
